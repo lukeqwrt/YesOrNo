@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Raleway', sans-serif;
+}
+.main{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: url('./img/pexels-monstera-5874691.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+.main .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main .wrapper span{
+    margin: 10px 0;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.main .image{
+    position: absolute;
+
+}
+
+.main #smiley{
+    top: 90px;
+    left: 20px;
+}
+.main #frog{
+    top: 90px;
+    transform: translate(0, -50%);
+    right: 90px;
+}
+.main #v{
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.main .image img{
+    height: auto;
+    width: 160px;
+}
+
+
+@media (min-width: 1332px) {
+    .main .image img{
+        height: auto;
+        width: 190px;
+    }
+    .main #smiley{
+        top: 90px;
+        left: 200px;
+    }
+    .main #frog{
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 80px;
+    }
+    .main #v{
+        bottom: 30px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+}

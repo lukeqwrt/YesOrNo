@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Raleway', sans-serif;
+}
+.main{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: url('./img/pexels-monstera-5874691.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+.main .pls_wrapper{
+    position: absolute;
+    top: 30%;
+    font-weight: 700;
+    font-size: 30px;
+    display: none;
+ 
+}
+.main .pls_wrapper span{
+    margin: 0 15px;
+    white-space: nowrap;
+}
+.main .image{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+.main .image img{
+    height: auto;
+    width: 160px;
+}
+.main #frog{
+    top: 160px;
+    left: 190px;
+}
+.main #kirmit{
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 190px;
+}
+.main #cat{
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.main .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main .wrapper span{
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.main .wrapper .buttons{
+    margin: 15px 0;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+}
+.main .wrapper .buttons a .btn,
+.main .wrapper .buttons .btn{
+    /* padding: 10px 50px; */
+    width: 140px;
+    height: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    border-radius: 100px;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition:transform .5s ease,box-shadow .5s ease;
+    text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+}
+.main .wrapper .buttons .btn:nth-child(1){
+    z-index: 99;
+    background-color: rgb(235, 113, 113);
+    box-shadow: 0 0 0 2px rgb(117, 48, 48), 0 10px 0 2px rgb(99, 47, 47);
+    border: 1px solid rgb(255, 172, 172);
+}
+.main .wrapper .buttons .btn:nth-child(1):hover{
+    transform: translateY(10px);
+    box-shadow: 0 0 0 2px rgb(117, 48, 48), 0 0 0 2px rgb(117, 48, 48);
+}
+.main .wrapper .buttons a{
+    grid-column: 2/3;
+}
+.main .wrapper .buttons a:nth-child(2) .btn{
+
+    box-shadow: 0 0 0 2px #1b401c, 0 10px 0 2px #1b401c;
+    border: 1px solid rgb(196, 235, 194);
+    background-color: rgb(102, 185, 113);
+}
+.main .wrapper .buttons a:nth-child(2) .btn:hover{
+    transform: translateY(10px);
+    box-shadow: 0 0 0 2px #1b401c, 0 0 0 2px #1b401c;
+}
+
+
+@media (max-width: 1300px) {
+    .main #frog{
+        top: 160px;
+        left: 80px;
+    }
+    .main #kirmit{
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 80px;
+    }
+    .main #cat{
+        bottom: 60px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    
+}
+
+@media (max-width: 777px) {
+    .main #frog{
+        top: 160px;
+        left: 50px;
+    }
+    .main #kirmit{
+        top:20%;
+        transform: translate(0, -50%);
+        right: 30px;
+    }
+    .main #cat{
+        bottom: 60px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    .main{
+        background-position: top 0 right 67%;
+
+    }
+    .main .wrapper .buttons{
+        /* max-width: 380px; */
+
+    }
+}
+
+
+@media (max-width: 500px) {
+    .main #frog{
+        top: 8%;
+        left: 30px;
+    }
+    .main #kirmit{
+        top:27%;
+        transform: translate(0, -50%);
+        right: -51px;
+    }
+    .main #cat{
+        bottom: 60px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+}
